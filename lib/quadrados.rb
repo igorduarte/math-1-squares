@@ -2,18 +2,16 @@ require 'prime'
 
 class Quadrados
   def initialize(n)
-    @n = n
+    @n = Prime.first(n)
   end
 
   def quadrado_da_soma
-    a = Prime.first(@n)
-    a.sum ** 2
+    @n.sum ** 2
   end
 
   def soma_dos_quadrados
-    a = Prime.first(@n)
     b = []
-    a.each { |n| b << n**2  }
+    @n.each { |n| b << n**2  }
     b.sum
   end
 
