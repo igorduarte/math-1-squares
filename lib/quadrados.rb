@@ -2,17 +2,17 @@ require 'prime'
 
 class Quadrados
   def initialize(n)
-    @n = Prime.first(n)
+    @primes = Prime.first(n.to_i)
   end
 
   def quadrado_da_soma
-    @n.sum ** 2
+    @primes.sum ** 2
   end
 
   def soma_dos_quadrados
-    b = []
-    @n.each { |n| b << n**2  }
-    b.sum
+    squares = []
+    @primes.each { |prime| squares << prime**2  }
+    squares.sum
   end
 
   def diferenca
